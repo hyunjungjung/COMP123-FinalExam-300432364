@@ -13,7 +13,7 @@ using System.Threading;
  * Statudent # : 300432364
  * Date : August 19, 2016
  * Description : generateNameForm class for Final Exam
- */ 
+ */
 namespace COMP123_S2016_FinalExam
 {
     public partial class GenerateNameForm : Form
@@ -24,22 +24,42 @@ namespace COMP123_S2016_FinalExam
         private Random _random = new Random();
         private Character _character = new Character();
 
+        // constructor
         public GenerateNameForm()
         {
             InitializeComponent();
 
 
         }
+        // private methods
         private void _generateNames()
         {
-            string ranFirstName = this._firstName[this._random.Next(this._firstName.Count)];
-            string ranLastName = this._lastName[this._random.Next(this._lastName.Count)];
 
-            FirstNameTextBox.Text = ranFirstName;
-            LastNameTextBox.Text = ranLastName;
+            Random ran = new Random();
 
-            _character.FirstName = FirstNameTextBox.Text;
-            _character.LastName = LastNameTextBox.Text;
+            FirstNameTextBox.Text = FirstNameListBox.ToString();
+            LastNameTextBox.Text = LastNameListBox.ToString();
+
+            Program.character.FirstName = FirstNameTextBox.ToString();
+            Program.character.LastName = LastNameTextBox.ToString();
+
+            //int num_firstName = FirstNameListBox.Items.Count;
+            //string[] firstName = new string[num_firstName];
+            //FirstNameListBox.Items.CopyTo(firstName, 0);
+
+            //int num_lastName = LastNameListBox.Items.Count;
+            //String[] lastName = new string[num_lastName];
+            //LastNameListBox.Items.CopyTo(lastName, 0);
+
+            //for (int i = 0; i < num_firstName; i++)
+            //{
+            //    _character.FirstName = FirstNameTextBox.Text;
+            //}
+
+            //for (int i = 0; i < num_lastName; i++)
+            //{
+            //    _character.LastName = LastNameTextBox.Text;
+            //}
         }
 
         private void GenerateButton_Click(object sender, EventArgs e)

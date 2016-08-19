@@ -38,5 +38,16 @@ namespace COMP123_S2016_FinalExam
         {
             Application.Exit();
         }
+
+        private void FinalForm_Load(object sender, EventArgs e)
+        {
+            Character character = new Character();
+            character.Strength = StrengthTextBox.Text;
+            character.Dexterity = DexterityTextBox.Text;
+            character.Constitution = ConstitutionTextBox.Text;
+            character.Intelligence = IntelligenceTextBox.Text;
+            character.Wisdom = WisdomTextBox.Text;
+            character.Charisma = CharismaTextBox.Text;
+        }
     }
 }
