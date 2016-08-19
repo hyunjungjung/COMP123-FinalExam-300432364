@@ -17,10 +17,10 @@ namespace COMP123_S2016_FinalExam
        
         static void Main()
         {
-            Application.Run(new SplashForm());
-            Application.Run(new GenerateNameForm());
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new SplashForm());
             Application.Run(new AbilityGeneratorForm());
         }
     }

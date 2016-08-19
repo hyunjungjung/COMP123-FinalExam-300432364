@@ -20,5 +20,23 @@ namespace COMP123_S2016_FinalExam
         public string Charisma { get; set; }
 
         public string Race { get; set; }
+        /**
+         * <summary>
+         * The property of FirstName
+         * </summary>
+         * 
+         * @property FirstName
+         * @type String
+         */
+        public string FirstName { get; set; }
+        /**
+          * <summary>
+          * The property of LastName
+          * </summary>
+          * 
+          * @property FirstName
+          * @type String
+          */
+        public string LastName { get; set; }
     }
 }

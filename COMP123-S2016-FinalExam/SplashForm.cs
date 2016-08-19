@@ -20,6 +20,8 @@ namespace COMP123_S2016_FinalExam
         public SplashForm()
         {
             InitializeComponent();
+            
+
         }
 
         private void SplashForm_Shown(object sender, EventArgs e)
@@ -32,11 +34,15 @@ namespace COMP123_S2016_FinalExam
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             timer1.Stop();
-            GenerateNameForm.ActiveForm.Show();
+            GenerateNameForm generateNameForm = new GenerateNameForm();
+            generateNameForm.Show();
             this.Hide();
-                
+            this.Close();
+            
         }
+        
 
 
     }
